@@ -1,5 +1,1 @@
-const fun = () => {
-  console.log(212)
-}
-
-fun()
+import ZrTool from "./package/index"
