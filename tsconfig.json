@@ -5,20 +5,24 @@
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
+    "types": ["jest"],
     "baseUrl": ".",
-    "allowJs": true,
-    "types": ["./index.d.ts"],
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+
+    "rootDir": "./src",
+    "noEmitHelpers": true,
     "paths": {
       "@/*": ["src/*"]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "lib": ["ES2019", "DOM"]
   },
-  "include": ["src/**/*.ts", "src/*.ts", "src/**/**/*.ts", "index.d.ts"],
+  "include": ["src/**/*.ts", "src/*.ts", "src/**/**/*.ts", "src/**/**/*.test.ts", "index.d.ts", "type.d.ts"],
   "exclude": ["node_modules"]
 }
