@@ -1,4 +1,4 @@
-export function countMaxNumber(firstNum: string, secondNum: string): string {
+export function countBigInt(firstNum: string, secondNum: string): string {
   const maxLength = Math.max(firstNum.length, secondNum.length)
   firstNum = firstNum.padStart(maxLength, "0")
   secondNum = secondNum.padStart(maxLength, "0")

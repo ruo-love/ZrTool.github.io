@@ -3,16 +3,20 @@ const htmlPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: "development",
-    entry: path.join(__dirname, './src/index.ts'),
+    entry: path.join(__dirname, './src/package/index.ts'),
     output: {
         path: path.join(__dirname, './dist'),
-        filename: 'js/[name]-[hash:10].js',
-        clean: true
+        filename: '[name].js',
+        clean: true,
+        library: {
+            name: 'zrtool',
+            type: 'umd',
+        },
     },
+
     resolve: {
         extensions: ['.js', '.ts',],
     },
-    plugins: [new htmlPlugin()],
     module: {
         rules: [
             {
