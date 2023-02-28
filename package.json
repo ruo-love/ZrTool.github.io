@@ -1,15 +1,24 @@
 {
-  "name": "zrtool",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "get-zrtool",
+  "private": false,
+  "version": "0.0.9",
+  "module": "dist/main.js",
+  "types": "dist/type.d.ts",
+  "main": "dist/main.js",
+  "description": "zrtool函数工具库",
+  "author": "",
+  "keywords": [],
+  "files": [
+    "dist",
+    "type.d.ts"
+  ],
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack",
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "coverage": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -27,5 +36,8 @@
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "get-zrtool": "^0.0.7"
   }
 }

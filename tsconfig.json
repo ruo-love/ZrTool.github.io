@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "module": "ES2015",
+    "target": "ESNEXT",
+    "module": "ESNEXT",
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
@@ -20,8 +20,7 @@
     "noEmitHelpers": true,
     "paths": {
       "@/*": ["src/*"]
-    },
-    "lib": ["ES2019", "DOM"]
+    }
   },
   "include": ["src/**/*.ts", "src/*.ts", "src/**/**/*.ts", "src/**/**/*.test.ts", "index.d.ts", "type.d.ts"],
   "exclude": ["node_modules"]

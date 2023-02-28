@@ -1,5 +1,11 @@
-export function createWaterfallLayout(cols: number = 10, selector: string): void {
-  const width: number = Math.floor(document.documentElement.clientWidth / cols)
+export function createWaterfallLayout(
+  cols: number = 10,
+  selector: string,
+  containerId: string = "water-container"
+): void {
+  const container = document.getElementById(containerId)
+  if (!container) return
+  const width: number = Math.floor(container.clientWidth / cols)
   const heightArray: Array<any> = []
   const elementArray = document.querySelectorAll(selector)
   elementArray.forEach((e: any, i) => {
