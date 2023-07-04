@@ -1,20 +1,29 @@
 {
-  "name": "get-zrtool",
+  "name": "@zrcode/jstool",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.1.2",
   "module": "dist/main.js",
   "types": "dist/type.d.ts",
   "main": "dist/main.js",
   "description": "zrtool函数工具库",
   "author": "",
-  "keywords": [],
+  "keywords": [
+    "zr",
+    "tool",
+    "@zr/tool",
+    "@zr"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "files": [
     "dist",
     "type.d.ts"
   ],
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack",
+    "dev": "webpack-dev-server --config webpack.dev.config.js",
+    "build": "webpack --config webpack.pro.config.js",
     "test": "jest",
     "test-watch": "jest --watch",
     "coverage": "jest --coverage"
@@ -38,6 +47,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@zrcode/jstool": "^0.1.2",
     "get-zrtool": "^0.0.7"
   }
 }

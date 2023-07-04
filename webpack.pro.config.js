@@ -1,5 +1,5 @@
 const path = require("path")
-const htmlPlugin = require('html-webpack-plugin')
+console.log(process.env.NODE_ENV)
 
 module.exports = {
     mode: "development",
@@ -9,7 +9,7 @@ module.exports = {
         filename: '[name].js',
         clean: true,
         library: {
-            name: 'zrtool',
+            name: '@zrcode/jstool',
             type: 'umd',
         },
     },
@@ -20,7 +20,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.ts$/,
                 use: [
                     {
                         loader: 'ts-loader',

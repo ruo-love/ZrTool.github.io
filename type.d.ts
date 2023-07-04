@@ -1,4 +1,4 @@
-declare module "get-zrtool" {
+declare module "@zrcode/jstool" {
   export function arrayFlat(array: TArray, shallow?: boolean): TArray
   export function countBigInt(firstNum: string, secondNum: string): string
   export function createWaterfallLayout(cols: number, selector: string, containerId: string): void
