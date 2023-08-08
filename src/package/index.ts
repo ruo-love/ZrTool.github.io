@@ -1,4 +1,3 @@
-import { encrypto } from "./Aes";
 
 export { countBigInt } from "./countBigInt/index";
 export { arrayFlat } from "./arrayFlat/index";

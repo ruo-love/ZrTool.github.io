@@ -1,7 +1,7 @@
 {
   "name": "@zrcode/jstool",
   "private": false,
-  "version": "0.1.2",
+  "version": "0.1.9",
   "module": "dist/main.js",
   "types": "dist/type.d.ts",
   "main": "dist/main.js",
@@ -13,14 +13,13 @@
     "@zr/tool",
     "@zr"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "files": [
     "dist",
     "type.d.ts"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.config.js",
     "build": "webpack --config webpack.pro.config.js",
@@ -48,7 +47,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@zrcode/jstool": "^0.1.2",
+    "@zrcode/jstool": "^0.1.9",
     "crypto-js": "^4.1.1",
     "get-zrtool": "^0.0.7"
   }

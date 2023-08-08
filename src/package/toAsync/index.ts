@@ -12,7 +12,6 @@ export function toAsync<T, U = Error>(promise: Promise<T>, errorExt?: object): P
         const parsedError = Object.assign({}, err, errorExt)
         return [parsedError, undefined]
       }
-
       return [err, undefined]
     })
 }
