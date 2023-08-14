@@ -22,7 +22,7 @@ export function createLocalStorage<T extends Local>() {
       value,
       expire: expire !== null ? new Date().getTime() + expire : null,
     };
-    const json = encrypto(encryptoData);
+    const json = encrypto(encryptoData,"zrcode-js-tool");
     window.localStorage.setItem(key as string, json);
   }
 
@@ -31,7 +31,7 @@ export function createLocalStorage<T extends Local>() {
     if (json) {
       let localKeyData: StorageData<T[K]> | null = null;
       try {
-        localKeyData = decrypto(json);
+        localKeyData = decrypto(json,"zrcode-js-tool");
       } catch (err) {
         console.log("获取本地存储数据=》解密失败:", err);
       }

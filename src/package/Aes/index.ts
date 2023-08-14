@@ -1,10 +1,10 @@
 import { AES } from "crypto-js";
-const CryptoSecret = "zrcode-js-tool";
+
 /**
  * 加密数据
  * @param data - 数据
  */
-export function encrypto(data: any) {
+export function encrypto(data: any,CryptoSecret: string) {
   const newData = JSON.stringify(data);
   return AES.encrypt(newData, CryptoSecret).toString();
 }
@@ -12,7 +12,7 @@ export function encrypto(data: any) {
  * 解密数据
  * @param cipherText - 密文
  */
-export function decrypto(cipherText: string) {
+export function decrypto(cipherText: string,CryptoSecret: string) {
   const bytes = AES.decrypt(cipherText, CryptoSecret);
   const originalText = bytes.toString(CryptoJS.enc.Utf8);
   if (originalText) {
