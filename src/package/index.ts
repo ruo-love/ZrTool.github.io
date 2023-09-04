@@ -29,3 +29,4 @@ export { toggle } from "./toggle";
 export { filterValue } from "./filterValue";
 export { encrypto, decrypto } from "./Aes/index";
 export { createLocalStorage } from "./storage/index";
+export * as envTool from "./envTool";

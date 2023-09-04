@@ -96,6 +96,18 @@ declare module "@zrcode/jstool" {
   export function formatDate(time: string | number | Date): string;
   export function uid(length: number): string;
   export function setVar(varName: string, varValue: any): void;
+  export interface envTool {
+    isWeChatBrowser: () => boolean;
+    isAndroid: () => boolean;
+    isIOS(): () => boolean;
+    isPc: () => boolean;
+    isIPad: () => boolean;
+    isIPhone: () => boolean;
+    isMacintosh: () => boolean;
+    isWindows: () => boolean;
+    currentLanguage: () => [string, readonly string[]];
+    urlParamsMap: (url: string) => any;
+  }
 }
 
 declare interface IstorageReturn<T> {
