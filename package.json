@@ -1,7 +1,7 @@
 {
   "name": "@zrcode/jstool",
   "private": false,
-  "version": "0.2.3",
+  "version": "0.2.6",
   "module": "dist/main.js",
   "types": "dist/type.d.ts",
   "main": "dist/main.js",
@@ -48,7 +48,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@zrcode/jstool": "^0.1.9",
+    "@zrcode/jstool": "^0.2.4",
     "crypto-js": "^4.1.1",
     "get-zrtool": "^0.0.7"
   }

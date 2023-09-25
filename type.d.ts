@@ -90,26 +90,26 @@ declare module "@zrcode/jstool" {
       [key: string]: any;
     }
   >(): IstorageReturn<T>;
-  export function encrypto(data: any): string;
-  export function decrypto(cipherText: string): any;
+  export function encrypto(data: any, CryptoSecret: string): string;
+  export function decrypto(cipherText: string, CryptoSecret: string): any;
   export function getTimestampOfNDaysAgo(n?: number): number;
   export function formatDate(time: string | number | Date): string;
   export function uid(length: number): string;
   export function setVar(varName: string, varValue: any): void;
-  export interface envTool {
-    isWeChatBrowser: () => boolean;
-    isAndroid: () => boolean;
-    isIOS(): () => boolean;
-    isPc: () => boolean;
-    isIPad: () => boolean;
-    isIPhone: () => boolean;
-    isMacintosh: () => boolean;
-    isWindows: () => boolean;
-    currentLanguage: () => [string, readonly string[]];
-    urlParamsMap: (url: string) => any;
-  }
+  export const envTool: envTool;
 }
-
+interface envTool {
+  isWeChatBrowser: () => boolean;
+  isAndroid: () => boolean;
+  isIOS(): () => boolean;
+  isPc: () => boolean;
+  isIPad: () => boolean;
+  isIPhone: () => boolean;
+  isMacintosh: () => boolean;
+  isWindows: () => boolean;
+  currentLanguage: () => [string, readonly string[]];
+  urlParamsMap: (url: string) => any;
+}
 declare interface IstorageReturn<T> {
   get: <K extends keyof T>(key: K) => T[K] | null;
   set: <K extends keyof T>(key: K, value: T[K], expire?: number) => void;
