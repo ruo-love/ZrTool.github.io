@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.3.2",
   "module": "dist/main.js",
-  "types": "type.d.ts",
+  "types": "dist/type.d.ts",
   "main": "dist/main.js",
   "description": "js函数工具库",
   "author": "",
@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@zrcode/jstool": "^0.2.4",
+    "@zrcode/zero": "^0.0.8",
     "crypto-js": "^4.1.1",
     "get-zrtool": "^0.0.7"
   }
