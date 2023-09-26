@@ -85,13 +85,13 @@ declare module "@zrcode/jstool" {
     filterType: string,
     _oldValue?: string | number
   ): string | number;
-  export function createLocalStorage<
-    T extends {
-      [key: string]: any;
-    }
-  >(): IstorageReturn<T>;
-  export function encrypto(data: any, CryptoSecret: string): string;
-  export function decrypto(cipherText: string, CryptoSecret: string): any;
+  // export function createLocalStorage<
+  //   T extends {
+  //     [key: string]: any;
+  //   }
+  // >(): IstorageReturn<T>;
+  // export function encrypto(data: any, CryptoSecret: string): string;
+  // export function decrypto(cipherText: string, CryptoSecret: string): any;
   export function getTimestampOfNDaysAgo(n?: number): number;
   export function formatDate(time: string | number | Date): string;
   export function uid(length: number): string;

@@ -4,7 +4,7 @@ const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: path.join(__dirname, "./src/package/index.ts"),
   output: {
     path: path.join(__dirname, "./dist"),
@@ -59,9 +59,6 @@ module.exports = {
           reuseExistingChunk: true,
         },
       },
-    },
-    runtimeChunk: {
-      name: (entrypoint) => `runtimechunk~${entrypoint.name}`,
     },
   },
 };

@@ -30,6 +30,6 @@
     "src/**/**/*.test.ts",
     "index.d.ts",
     "type.d.ts"
-  ],
+, "src/index.js"  ],
   "exclude": ["node_modules"]
 }
