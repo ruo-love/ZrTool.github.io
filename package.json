@@ -1,9 +1,9 @@
 {
   "name": "@zrcode/jstool",
   "private": false,
-  "version": "0.3.2",
+  "version": "0.3.5",
   "module": "dist/main.js",
-  "types": "dist/type.d.ts",
+  "types": "type.d.ts",
   "main": "dist/main.js",
   "description": "js函数工具库",
   "author": "",
@@ -35,6 +35,7 @@
     "@jest/globals": "^29.4.3",
     "@types/crypto-js": "^4.1.1",
     "@types/jest": "^29.4.0",
+    "@types/lodash": "^4.14.199",
     "babel-jest": "^29.4.3",
     "babel-loader": "^9.1.2",
     "html-webpack-plugin": "^5.5.0",
@@ -48,9 +49,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "@zrcode/jstool": "^0.2.4",
-    "@zrcode/zero": "^0.0.8",
-    "crypto-js": "^4.1.1",
-    "get-zrtool": "^0.0.7"
+    "@zrcode/zero": "^0.1.1",
+    "crypto-js": "^4.1.1"
   }
 }

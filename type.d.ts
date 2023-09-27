@@ -35,7 +35,7 @@ declare module "@zrcode/jstool" {
     key: string,
     children: string
   ): any;
-  export function deepClone(target: any, map: MapType): any;
+  export function deepClone(target: any, map?: MapType): any;
   export interface MyPromise {
     then: (resolve: Function, reject: Function) => any;
     catch: (reject: Function) => any;
@@ -82,7 +82,7 @@ declare module "@zrcode/jstool" {
   export function toggle<Args>(fns: Array<any>): any;
   export function filterValue(
     value: string | number,
-    filterType: string,
+    filterType: FilterType,
     _oldValue?: string | number
   ): string | number;
   // export function createLocalStorage<
@@ -115,4 +115,15 @@ declare interface IstorageReturn<T> {
   set: <K extends keyof T>(key: K, value: T[K], expire?: number) => void;
   remove: <K extends keyof T>(key: K) => void;
   clear: () => void;
+}
+
+declare enum FilterType {
+  "uint" = "uint",
+  "int" = "int",
+  "ufloat" = "ufloat",
+  "float" = "float",
+  "udecimal" = "udecimal",
+  "notSpacing" = "notSpacing",
+  "rate" = "rate",
+  "minus" = "minus",
 }
