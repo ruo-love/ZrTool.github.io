@@ -97,6 +97,7 @@ declare module "@zrcode/jstool" {
   export function uid(length: number): string;
   export function setVar(varName: string, varValue: any): void;
   export const envTool: envTool;
+  export function copyToClipboard(text: string): void;
 }
 interface envTool {
   isWeChatBrowser: () => boolean;
